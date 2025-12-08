@@ -414,22 +414,56 @@ section {
 
 .sub-title {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  gap: 15px;
   text-align: left;
+  flex-wrap: nowrap;
+}
+.sub-title > a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 .sub-title h3 {
   position: relative;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 .sub-title h3 span {
   color: var(--color-secondary);
 }
-.sub-title i {
-  position: relative;
+.sub-title .contact-icons {
   display: flex;
-  font-size: 1.3rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+.sub-title .contact-icon {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.sub-title .contact-icon a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.sub-title i {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  color: var(--color-secondary);
+}
+.sub-title i:hover {
+  transform: scale(1.1);
+  color: var(--color-white);
 }
 
 .about-container {
