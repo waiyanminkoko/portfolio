@@ -5,6 +5,28 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modern Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-grey-6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-secondary);
+}
+
 :root {
   --color-primary: #191d2b;
   --color-secondary: #27AE60;
@@ -22,9 +44,9 @@
 }
 
 .light-mode {
-  --color-primary: #fffae6;
-  --color-secondary: #00a2ff;
-  --color-white: #454e56;
+  --color-primary: #F6F1F1;
+  --color-secondary: #19A7CE;
+  --color-white: #000000;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #6c7983;
@@ -38,7 +60,7 @@
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
   position: relative;
@@ -64,7 +86,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 6rem;
+  padding: 4rem 6rem;
 }
 
 .container {
@@ -161,34 +183,62 @@ section {
 }
 
 .back-button {
-  padding: 0px 0px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
   background-color: var(--color-secondary);
-  color: var(--color-primary);
+  color: var(--color-white);
   text-align: center;
   text-decoration: none;
-  width: 50px;
-  height: 40px;
-  font-family: "Roboto", sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: var(--color-primary);
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: fit-content;
 }
-.back-button:hover {
-  filter: brightness(120%) saturate(120%);
+
+.back-button .back-arrow {
+  display: inline-block;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-button .back-text {
+  display: inline-block;
+  max-width: 150px;
+  opacity: 1;
+  transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-button.collapsed {
+  padding: 12px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  gap: 0;
+}
+
+.back-button.collapsed .back-text {
+  max-width: 0;
+  opacity: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .back-button:hover {
   background-color: #2EE59D;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  color: #fff;
-  transform: translateY(-7px);
+  box-shadow: 0px 8px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-2px);
 }
 
 .forward-button-container {
@@ -216,6 +266,95 @@ section {
 .btn-con {
   display: flex;
   text-align: center;
+}
+
+/* Related Blogs Section */
+.related-blogs {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.related-blogs h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.related-blogs h2 span {
+  color: var(--color-secondary);
+}
+
+.blog-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  border: 1px solid var(--color-grey-5);
+  border-radius: var(--br-sm-2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--color-grey-5);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-secondary);
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card-content {
+  padding: 1.5rem;
+}
+
+.blog-card-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-white);
+}
+
+.blog-card-content p {
+  color: var(--color-grey-2);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.blog-card-link {
+  color: var(--color-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-card-link:hover {
+  color: var(--color-white);
+  gap: 0.8rem;
 }
 
 .main-btn {
@@ -295,8 +434,18 @@ section {
 
 .about-container {
   display: grid;
-  padding-top: 1rem;
+  padding-top: 3.5rem;
   padding-bottom: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.about-container h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  color: var(--color-white);
 }
 .about-container .image-container {
   display: flex;
@@ -304,6 +453,7 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin: 1.5rem 0;
 }
 .about-container .image-container .image {
   display: flex;
@@ -344,7 +494,23 @@ section {
 .about-container p {
   line-height: 2rem;
   padding: 1rem;
-  color: var(--color-grey-1);
+  color: var(--color-white);
+}
+.about-container ol,
+.about-container ul {
+  padding-left: 3rem;
+  margin: 1rem 0;
+  color: var(--color-white);
+}
+.about-container ol li,
+.about-container ul li {
+  line-height: 2rem;
+  margin: 0.5rem 0;
+  color: var(--color-white);
+}
+.about-container ol li strong,
+.about-container ul li strong {
+  color: var(--color-secondary);
 }
 .about-container h4 {
   font-size: 2rem;
@@ -382,7 +548,7 @@ section {
 .about-container .about-item .abt-text p {
   line-height: 2rem;
   padding: 1rem;
-  color: var(--color-grey-1);
+  color: var(--color-white);
 }
 .about-container .about-item .profile-image {
   border-radius: var(--br-sm-2);

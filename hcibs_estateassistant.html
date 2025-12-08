@@ -16,7 +16,10 @@
 </head>
 <body>
     <div class="back-button-container">
-        <a href="index.html" onclick="window.history.back();" class="back-button">⬅</a>
+        <a href="index.html#blogs" class="back-button">
+            <span class="back-arrow">←</span>
+            <span class="back-text">Back to Portfolio</span>
+        </a>
     </div>
 
     <section class="container about active" id="#">
@@ -139,11 +142,9 @@
                         Work as Head of Office Staff Assistant Team @ HCIBS
                     </p>-->
                     <p>
-                        Hi there! I am a Mechatronics & Robotics student in 
-                        <a href="https://www.sp.edu.sg/" class = "link" target = "_blank">Singapore Polytechnic</a>
-                        , leading the 
-                        <a href="https://www.instagram.com/thespisc/" class = "link" target = "_blank">SPISC</a>
-                        as Membership Secretary and working part-time as Head of Office Staff Assistant Team  
+                        Hi there! I am a Computer Engineering student at
+                        <a href="https://www.ntu.edu.sg/" class = "link" target = "_blank">Nanyang Technological University (NTU)</a>
+                        and working part-time as Head of Office Staff Assistant Team  
                         <a href="https://www.hcibs.edu.sg/" class = "link" target = "_blank">@HCIBS.</a> 
                         With a keen interest in Robotics, AI & IOT, I am constantly seeking new opportunities to expand my experience. 
                         If you have any internship opportunities or just want to connect, feel free to contact me!
@@ -167,11 +168,58 @@
             </div>
 
             </div>
+            <!-- Related Blogs Section -->
+            <div class="related-blogs">
+                <h2>More <span>Experiences</span></h2>
+                <div class="blog-cards-grid">
+                    <a href="hcibs_estateofficer.html" class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="blog_img/hcibs_estateofficer/cny_interns.jpg" alt="HCIBS Estate Officer">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Temporary Estate Officer @ HCIBS</h3>
+                            <p>Managing facilities and estate operations</p>
+                            <span class="blog-card-link">Read More →</span>
+                        </div>
+                    </a>
+                    <a href="hcibs_osa.html" class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="blog_img/hcibs_osa/osa_team.jpg" alt="HCIBS OSA">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Head of Office Staff Assistant (OSA) Team @ HCIBS</h3>
+                            <p>Streamlining administrative services and student welfare</p>
+                            <span class="blog-card-link">Read More →</span>
+                        </div>
+                    </a>
+                    <a href="botsync_intern.html" class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="blog_img/botsync_intern/selfie_mag.jpg" alt="Botsync Intern">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Mechatronics & Robotics Intern (Operations & Deployment) @ Botsync</h3>
+                            <p>Robotics operations and deployment</p>
+                            <span class="blog-card-link">Read More →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
     </section>
     
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
     <script src="js/app.js"></script>
+    <script>
+        // Collapse back button on scroll
+        window.addEventListener('scroll', function() {
+            const backButton = document.querySelector('.back-button');
+            if (window.scrollY > 100) {
+                backButton.classList.add('collapsed');
+            } else {
+                backButton.classList.remove('collapsed');
+            }
+        });
+    </script>
 
   </body>

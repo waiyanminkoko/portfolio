@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Google Data Center Outreach Hackathon 2025</title>
+    <link rel="stylesheet" href="styles/styles_blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe21c3d26a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/fe21c3d26a.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="back-button-container">
+        <a href="index.html#blogs" class="back-button">
+            <span class="back-arrow">←</span>
+            <span class="back-text">Back to Portfolio</span>
+        </a>
+    </div>
+
+    <section class="container about active" id="#">
+        <div class="main-title">
+            <h2><span>Google</span> Data Center Outreach Hackathon 2025 - <span>Participant</span> </h2>
+        </div>
+
+        <div class="about-container">
+            <h3>The Big Surprise: Outreach Turns into an All-Out Hackathon</h3>
+            <p>
+               When I signed up for the <a href="https://maps.app.goo.gl/qmQJaNi5QQ971gof7" class="link" target="_blank">Google Singapore</a> Data Centre Outreach, I was expecting talks, tours, and networking. The event was held at Mapletree Business City, and the initial atmosphere was buzzing with anticipation. I was assigned to Group 7, where I met a fantastic team of fellow students from NUS, NTU, and SMU, spanning various academic backgrounds, from Bachelor's to Master's degrees.
+            </p>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\group_selfie.jpg" alt="Selfie with the Team!">
+                </div>
+                <p class="image-info">Group photo at Google Data Center Outreach 2025</p>
+            </div>  
+            <p>
+                After the initial meet-and-greets and some fun Kahoot quizzes about Google's culture and data centers, things took a sharp and thrilling turn. Sitting on our table was not a notebook or a presentation slide, but a fully disassembled server, complete with gloves, cable cutter, crimping tool, and a network cable tester.
+            </p>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\DELL-EMC-Poweredge-R640 Server.png" alt="Dell EMC PowerEdge R640 Server">
+                </div>
+                <p class="image-info">Dell EMC PowerEdge R640 Server - Our challenge for the day</p>
+            </div>
+            <p>
+                My mind started racing. A server? This was my first time physically interacting with enterprise hardware, a world away from the cloud servers I was familiar with through <a href="https://cloud.google.com/" class="link" target="_blank">Google Cloud</a>. The realization hit: This wasn't just an outreach; it was a surprise hackathon!
+            </p>   
+            <h3>Hands-On Hardware: From Zero to Boot</h3>
+            <p>
+                The official goal was announced: assemble the server and then use it to tackle a series of challenges (Capture the Flag, or CTF) hosted on a local Google website. The moment the clock started, it was a race against time.
+            </p>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\Assembling Server.gif" alt="Team working on server assembly">
+                </div>
+                <p class="image-info">Our team assembling the server - Quick Take!</p>
+            </div>
+            <p>
+                Working with my teammates, we quickly assessed who was comfortable with what. Since I had previous experience building PCs at my family's technology company (<a href="https://www.facebook.com/tnt.ict.7" class="link" target="_blank">Technology and Trust (TNT)</a>) back in Myanmar, I took the lead on the physical assembly alongside three others.
+            </p>
+            <p>
+                We worked in sync: installing the fans, mounting the power supply and storage devices (SSD, memory), and connecting all the necessary cables to the motherboard. It was surprisingly straightforward, leveraging the familiar mechanics of PC building but on a more enterprise scale. Meanwhile, one of my teammates brilliantly handled the network connection, cutting and cleanly crimping the RJ45 network cable to link our assembled server to one of Google's working servers.
+            </p>
+            <h3>Debugging the Difference: Server vs. PC</h3>
+            <p>
+                The physical build was just the warm-up. The real challenge began when we tried to boot the server and connect it to Google's Virtual Linux Machine. This was profoundly different from booting a standard Windows PC which I was more used to.
+            </p>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\Troubleshooting-1.jpg" alt="Team troubleshooting server issues">
+                </div>
+                <p class="image-info">Troubleshooting and debugging the server</p>
+            </div>
+            <p>
+                We spent crucial minutes in the Boot Menu and Startup configuration, trying to locate the remote Google server. We were debugging settings, double-checking connections, and battling the unfamiliar server BIOS environment. At one point, we realized a network cable was plugged into the wrong port, but even after fixing that, we still couldn't connect.
+            </p>   
+            <p>
+                This is where the true value of teamwork shone. We simultaneously leveraged online resources like Stack Overflow and, crucially, received invaluable tips and gentle guidance from our team's dedicated Google Developer supervisor. After persistent troubleshooting, we finally managed to establish a connection and boot into the virtual Linux environment. The challenges were officially open!
+            </p>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\Troubleshooting-2.jpg" alt="Team working together on challenges">
+                </div>
+                <p class="image-info">Working together to solve the CTF challenges</p>
+            </div>
+            <h3>The Power of AI and Teamwork in CTF</h3>
+            <p>
+                The challenges primarily involved running various Linux commands to gather 'flags' which are pieces of hidden information about the server's specifications, network configuration, and operating system.
+            </p>
+            <p>
+                We quickly ran into a significant hurdle: the Linux installation was barebones. Many familiar tool libraries were missing and ironically given that we were at Google (especially in a Hackathon), we realized the internal network wasn't connected to the external internet, preventing us from downloading packages.
+            </p>            <p>
+                This pushed our troubleshooting into high gear, transforming the experience into an exciting, real-time competition of resourcefulness:
+            </p>
+            <ol>
+                <li><strong>Online Resourcefulness:</strong> We turned to our phones and tablets, aggressively Googling obscure, built-in Linux commands to find the necessary server details.</li>
+                <li><strong>AI-Assisted Debugging:</strong> We were one of the teams that immediately utilized AI tools like Gemini, Claude, and ChatGPT to rapidly find and refine the correct native commands. It became a human-AI troubleshooting loop, giving us a vital edge.</li>
+            </ol>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\Hackthon Group Pic-2.jpg" alt="Team celebrating completion">
+                </div>
+                <p class="image-info">Snapshot of the team after completing the challenges!</p>
+            </div>
+            <p>
+                We tackled each challenge, one difficult command at a time, relying purely on built-in utilities and clever search strategies. With only about 13 minutes left on the clock, we successfully entered the final flag! We crossed the finish line in 4th place, a truly incredible feat given the surprise format and our initial lack of server experience.
+            </p>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\Final Scoreboard.jpg" alt="Final hackathon scoreboard">
+                </div>
+                <p class="image-info">Final scoreboard - We finished 4th place!</p>
+            </div>
+            <h3>Lessons Learned: Beyond the Code</h3>
+            <p>
+                The surge of accomplishment I felt with my teammates when we finished was immense. This unexpected hackathon taught me more than just the difference between a cloud server and a physical one.
+            </p>
+            <div class="image-container">
+                <div class="image">
+                    <img src="blog_img\google_outreach\Experience Well-Remembered.jpg" alt="Memory from the hackathon">
+                </div>
+                <p class="image-info">Our Server and My NameTag - Experience Well Remembered!</p>
+            </div>
+            <p>
+                The most rewarding takeaways were:
+            </p>
+            <ul>
+                <li><strong>Communication is Key:</strong> Solving both hardware puzzles and obscure Linux problems require constant, clear communication and trust among the team members.</li>
+                <li><strong>The Power of Online Resources (and AI):</strong> In a high-pressure, resource-limited environment, the ability to rapidly search, synthesize information, and leverage AI for assisted troubleshooting is a critical modern skill.</li>
+                <li><strong>Friendships Formed:</strong> What started as a standard outreach event ended with great friendships forged under the shared pressure and excitement of an unexpected competition.</li>
+            </ul>
+            <p>
+                The Google Data Centre Outreach turned into a defining experience, reminding me that a "competition" can ultimately be a fun, challenging, and profoundly collaborative learning opportunity. The lessons learned, the experience earned, and the friendships formed are what truly mattered at the end of the day.
+            </p>
+               
+            
+            <div class="about-item">
+                <div class="profile-image">
+                    <img src="blog_img\small_profilepic.png" alt="">
+                </div>
+                <div class="abt-text">
+                    <div class="main-title">
+                        <h2><span>Wai Yan Min Ko Ko</span></h2>
+                    </div>
+                    <!--<p>
+                        Mechatronics & Robotics
+                        <br>
+                        @ Singapore Polytechnic, Year-3
+                        <br>
+                        Interested in Robotics, AI & IOT
+                        <br>
+                        Membership Secretary at SPISC
+                        <br>
+                        Work as Head of Office Staff Assistant Team @ HCIBS
+                    </p>-->
+                    <p>
+                        Hi there! I am a Computer Engineering student at
+                        <a href="https://www.ntu.edu.sg/" class = "link" target = "_blank">Nanyang Technological University (NTU)</a>
+                        and working part-time as Head of Office Staff Assistant Team  
+                        <a href="https://www.hcibs.edu.sg/" class = "link" target = "_blank">@HCIBS.</a> 
+                        With a keen interest in Robotics, AI & IOT, I am constantly seeking new opportunities to expand my experience. 
+                        If you have any internship opportunities or just want to connect, feel free to contact me!
+                    </p>
+                    <div class="contact-icons">
+                        <div class="contact-icon">
+                            <a href="https://www.linkedin.com/in/waiyanminkoko/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/SYK-WaiYan" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=waiyanminkoko@gmail.com" target="_blank"> 
+                                <i class="fa-brands fa-google"></i>
+                            </a> 
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            </div>
+            <!-- Related Blogs Section -->
+            <div class="related-blogs">
+                <h2>More <span>Experiences</span></h2>
+                <div class="blog-cards-grid">
+                    <a href="botsync_intern.html" class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="blog_img/botsync_intern/selfie_mag.jpg" alt="Botsync Intern">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Mechatronics & Robotics Intern @ Botsync</h3>
+                            <p>6-month internship in robotics operations and deployment at Botsync Pte. Ltd.</p>
+                            <span class="blog-card-link">Read More →</span>
+                        </div>
+                    </a>
+                    <a href="hcibs_osa.html" class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="blog_img/hcibs_osa/osa_team.jpg" alt="HCIBS OSA">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Head of Office Staff Assistant Team @ HCIBS</h3>
+                            <p>Leading administrative services and student welfare at Hwa Chong Institution Boarding School</p>
+                            <span class="blog-card-link">Read More →</span>
+                        </div>
+                    </a>
+                    <a href="isc_secretary.html" class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="blog_img/isc_secretary/ISC Excos.png" alt="ISC Secretary">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3>Membership Secretary @ SPISC</h3>
+                            <p>Leading the Singapore Polytechnic International Students' Club as Membership Secretary</p>
+                            <span class="blog-card-link">Read More →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </section>
+    
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <script src="js/app.js"></script>
+    <script>
+        // Collapse back button on scroll
+        window.addEventListener('scroll', function() {
+            const backButton = document.querySelector('.back-button');
+            if (window.scrollY > 100) {
+                backButton.classList.add('collapsed');
+            } else {
+                backButton.classList.remove('collapsed');
+            }
+        });
+    </script>
+
+  </body>
